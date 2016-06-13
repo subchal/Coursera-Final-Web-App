@@ -1,0 +1,84 @@
+<div ng-keydown="play($event)" ng-keyup="mute()">
+
+  <div class="instrument" >
+    <div class="insttopbar">
+      <a class="save instTopBTN" ng-click="saveCurrentPreset()"><i class="fa fa-floppy-o fa-x2"></i></a>
+      <a class="browse instTopBTN" ng-click="viewPresets()">{{currentPreset}}</a>
+      <a class="new instTopBTN" ng-click="nameNewPreset()">+</a>
+      <div class="topbarRight">
+        <a class="edit instTopBTN" ng-click="editBTNclick()">{{editBTN}}</a>
+      </div>
+    </div>
+
+    <div class="slideSpace">
+
+    </div>
+
+    <div class="sliderarea" ng-show="playShow">
+      <div class="vertSlide">
+        <input type="range" name="name" min="0.01" max="1" step="0.01" ng-model="spread" ng-change="Slider1()">
+      </div>
+      <div class="vertSlide">
+        <input type="range" name="name" min="0.01" max="1" step="0.01" ng-model="slide2" ng-change="Slider2()">
+      </div>
+      <div class="vertSlide">
+        <input type="range" name="name" min="0.01" max="1" step="0.01" ng-model="slide3" ng-change="Slider3()">
+      </div>
+      <div class="vertSlide">
+        <input type="range" name="name" min="0.01" max="1" step="0.01" ng-model="slide4" ng-change="Slider4()">
+      </div>
+      <div class="vertSlide">
+        <input type="range" name="name" min="0.01" max="1" step="0.01" ng-model="slide5" ng-change="Slider5()">
+      </div>
+    </div>
+
+    <div class="buttonarea" ng-show="playShow">
+      <a href="#" id="ibtn1" ng-mousedown="play(1)" ng-mouseup="mute()">{{}}</a>
+      <a href="#" id="ibtn2" ng-mousedown="play(2)" ng-mouseup="mute()">{{}}</a>
+      <a href="#" id="ibtn3" ng-mousedown="play(3)" ng-mouseup="mute()">{{}}</a>
+      <a href="#" id="ibtn4" ng-mousedown="play(4)" ng-mouseup="mute()">{{}}</a>
+      <a href="#" id="ibtn5" ng-mousedown="play(5)" ng-mouseup="mute()">{{}}</a>
+    </div>
+
+    <div class="editarea" ng-show="editShow">
+      <div class="left">
+        <h4>Root Note</h4>
+        <input type="range" name="root" min="0" max="6" step="1" ng-model="rootIndex" ng-change="changeRootIndex()">
+        <h4>Key</h4>
+        <label><input type="radio" ng-model="key" value="major"> Major</label><br/>
+        <label><input type="radio" ng-model="key" value="minor"> Minor</label><br/>
+      </div>
+      <div class="right">
+        <h4>Sound Type</h4>
+        <label><input type="radio" ng-model="soundType" value="triangle" ng-change="setOscType()"> Triangle</label><br/>
+        <label><input type="radio" ng-model="soundType" value="sawtooth" ng-change="setOscType()"> Sawtooth</label><br/>
+        <label><input type="radio" ng-model="soundType" value="square" ng-change="setOscType()"> Square</label><br/>
+      </div>
+    </div>
+
+    <div class="presetsview" ng-show="presetsShow">
+      <ul>
+        <li ng-repeat="preset in presets">
+          <a class="Pload" ng-click="loadPreset(preset)">{{preset.name}}</a>
+          <a class="Pdel" ng-click="deletePreset(preset)" >Delete</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="newpresetview" ng-show="newPresetShow">
+      <input type="text" ng-model="newPresetName" placeholder="New Preset">
+      <div>
+        <a ng-click="saveNewPreset()">Save</a>
+        <a ng-click="nameNewPreset()">Cancel</a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="masterVolume">
+    <label for="outvolume">Output Volume</label>
+    <input type="range" name="outvolume" min="0.0001" max="1" step="0.001" ng-model="mGain" ng-change="changeMGain()">
+  </div>
+
+</div>

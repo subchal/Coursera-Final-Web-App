@@ -1,0 +1,27 @@
+{
+  "name": "chordplay1",
+  "description": "Final Coursera Project",
+  "main": "index.js",
+  "authors": [
+    "Greg Smith"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.2",
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3",
+    "angular-ui-router": "^0.3.0",
+    "angular-resource": "^1.5.5",
+    "ng-dialog": "^0.6.1"
+  }
+}

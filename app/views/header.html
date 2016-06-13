@@ -1,0 +1,11 @@
+<nav>
+  <a ui-sref="app"><span class="title">Chord Player</span></a>
+  <ul>
+    <a ui-sref="app"><li>Play</li></a>
+    <a ui-sref="app.aboutus"><li>About</li></a>
+
+    <a ng-if="!loggedIn" ng-click="openLogin()"><li>Login</li></a>
+    <a ng-if="loggedIn" ui-sref="app.account"><li>{{username}}</li></a>
+    <a ng-if="loggedIn" ng-click="logOut()"><li>Logout</li></a>
+  </ul>
+</nav>

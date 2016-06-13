@@ -1,0 +1,16 @@
+TODO
+
+- Presets
+  - Delete
+
+- Users
+  - GET
+    logout
+  - POST
+    register
+    login
+
+- Account Page
+
+- Instrument Page
+  - Save a new preset to the server

@@ -1,0 +1,307 @@
+html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+body, body * {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.floatright {
+  float: right;
+  float: inline-end;
+  display: inline-block;
+}
+
+/*
+  Top Nav bar
+*/
+nav {
+  padding: 0px 0px;
+  height: 40px;
+  background: white;
+  box-shadow: 0px 0px 10px 1px #eaeaea;
+}
+nav .title {
+  padding: 10px 0 0 15px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+nav ul {
+  display: inline-block;
+  float: right;
+  padding-right: 30px;
+}
+nav ul a {
+  display: inline-block;
+  color: #3f3f3f;
+  height: 30px;
+  margin: 0px 0px;
+  padding: 10px 18px 0 18px;
+  border: 1px solid white;
+  text-align: center;
+}
+nav ul a:hover {
+  /*border-color: #afafaf;*/
+  color: blue;
+}
+
+/*
+  Instrument Panel
+*/
+.instrument {
+  position: relative;;
+  top: 70px;
+  width: 560px;
+  margin: 0px auto;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px 1px #eaeaea;
+}
+.insttopbar {
+  box-shadow: 2px 2px 5px 1px #efefef;
+  height: 50px;
+  margin-bottom: 5px;
+  z-index: 1;
+}
+.instTopBTN {
+  display: inline-block;
+  height: 18px;
+  background: white;
+  color: darkgrey;
+  /*min-width: 50px;*/
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: 0px 0px 0px 0px white;
+  border-radius: 2px;
+  padding: 15px;
+  margin: 0;
+}
+.topbarRight {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.instTopBTN:hover {
+  border-color: darkgrey;
+  color: #3f3f3f;
+  box-shadow: 0px 2px 2px 1px #dedede;
+}
+
+.browse {
+  width: 200px;
+  text-align: left;
+}
+.browse span {
+  padding-left: 20px;
+}
+
+/*
+  Instrument Sliders
+*/
+
+.slideSpace {
+  z-index: -5;
+  width: 100%;
+  height: 10px;
+  background: white;
+}
+
+.sliderarea {
+  margin: 0 auto;
+  padding-top: 0px;
+  width: 500px;
+}
+
+.vertSlide input {
+  margin-top: 0px;
+  transform: rotate(270deg);
+  width: 120px;
+  position: relative;
+  left: -30px;
+  top: 50px;
+  z-index: 1;
+}
+
+.vertSlide {
+  margin: 20px 20px;
+  width: 54px;
+  height: 130px;
+  background: #fcfcfc;
+  display: inline-block;
+}
+
+/*
+  Instrument Buttons
+*/
+.buttonarea {
+  height: 80px;
+  width: 480px;
+  margin: auto;
+}
+
+.buttonarea a {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  text-align: center;
+  background: #60CAFF;
+  /*border: 1px solid azure;*/
+  /*background: radial-gradient(#16A2FF, #006AC8 100%);*/
+  box-shadow: 1px 1px 2px 1px #dedede;
+  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+}
+
+#ibtn1 {
+  /*background: #60CAFF;*/
+}
+
+/*
+  Edit Area
+*/
+.editarea .left, .editarea .right{
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 40px auto;
+  padding: 0px 40px;
+}
+
+.editarea input, .editarea label {
+  padding: 2px;
+}
+
+.editarea h4 {
+  padding: 10px;
+}
+
+/*
+  Presets View
+*/
+.presetsview ul li {
+  height: 33px;
+  width: 100%;
+  margin: 1px 0;
+}
+
+.Pload {
+  position: absolute;
+  left: 0;
+  background: lightblue;
+  padding: 7px 30px 8px 30px;
+  width: 80%;
+}
+.Pload:hover {
+  background: #efefef;
+}
+.Pdel {
+  position: absolute;
+  right: 0;
+  padding: 7px 30px 8px 30px;
+  background: red;
+}
+.Pdel:hover {
+  background: #efefef;
+}
+
+/*
+  New Preset View
+*/
+
+.newpresetview {
+  padding: 30px;
+}
+
+.newpresetview input {
+  display: block;
+  line-height: 2em;
+  width: 180px;
+  padding: 0 5px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.newpresetview div {
+  width: 180px;
+  margin: auto;
+}
+
+.newpresetview a {
+  display: inline-block;
+  padding: 6px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid lightblue;
+  font-size: 16px;
+  margin: 0px 6px;
+}
+.newpresetview a:hover {
+  background-color: lightblue;
+  cursor: default;
+}
+
+
+/*
+  About Us Page
+*/
+.aboutUs {
+  width: 60%;
+  margin: 70px auto 0 auto;
+}
+
+.aboutUs * {
+  margin: 10px 0;
+}
+
+.aboutUs p {
+  margin: 30px 0;
+}
+
+/*
+  Account Page
+*/
+.accountpage {
+  width: 60%;
+  margin: 70px auto 0 auto;
+}
+
+.aboutUs * {
+  margin: 10px 0;
+}
+
+.aboutUs p {
+  margin: 30px 0;
+}
+
+
+/*
+  Random
+*/
+.masterVolume {
+  position: relative;
+  top: 170px;
+  margin: auto;
+  width: 300px;
+}
